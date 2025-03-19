@@ -19,7 +19,7 @@ mt.__namecall =
                 (args[1] == "Attack" or args[1] == "Heavy" or args[1] == "Stomp") and
                 typeof(args[2]) == "table"
          then
-            updateSelectedStyle(args) -- Call the function here
+            updateSelectedStyle(args)
             return old(self, unpack(args))
         end
 
