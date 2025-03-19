@@ -34,6 +34,27 @@ end)
 
 setreadonly(mt, true)
 
-getgenv().setStyle = function(newStyle)
-    style = newStyle
+
+local mt = getrawmetatable(game)
+setreadonly(mt, false)
+local old_index = mt.__index
+
+local currentStyle = ""
+
+local function setStyle(styleName)
+    currentStyle = styleName
+
+    mt.__index =
+        newcclosure(
+        function(a, b)
+            if tostring(a) == "Class" then
+                if tostring(b) == "Value" then
+                    return styleName
+                end
+            end
+            return old_index(a, b)
+        end
+    )
 end
+
+getgenv().setStyle = setStyle
