@@ -12,8 +12,11 @@ mt.__namecall = newcclosure(function(self, ...)
         local attackType = args[1]
         if attackType == "Attack" or attackType == "Stomp" or attackType == "Heavy" then
             local character = args[2]["Character"]
-            args[2]["Limb"] = getgenv().selectedLimb
-            args[2]["Hit"] = character[getgenv().selectedLimb]
+
+            if getgenv().selectedLimb then 
+                args[2]["Limb"] = getgenv().selectedLimb
+                args[2]["Hit"] = character[getgenv().selectedLimb]
+            end
             return old(self, unpack(args))
         end
     end
