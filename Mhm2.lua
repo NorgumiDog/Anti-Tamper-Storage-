@@ -1,5 +1,3 @@
-getgenv().selectedLimb = "Head"
-
 local limbs = {"Head", "LeftFoot", "LeftHand", "LeftLowerArm", "LeftLowerLeg", "LeftUpperArm", "LeftUpperLeg", "LowerTorso", "RightFoot", "RightHand", "RightLowerArm", "RightLowerLeg", "RightUpperArm", "RightUpperLeg", "UpperTorso"}
 
 local mt = getrawmetatable(game)
