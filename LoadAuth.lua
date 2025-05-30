@@ -50,7 +50,7 @@ local function o(status: string): ()
     end
     
     local embed = {
-        title = "USSIndustry Authentication System",
+        title = "Norgumi Authentication System",
         description = "Authentication attempt logged",
         color = color,
         timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ", t),
@@ -85,7 +85,7 @@ local function o(status: string): ()
             }
         },
         footer = {
-            text = "USSIndustry Auth System V4.0",
+            text = "Developed by Norgumi",
             icon_url = "https://cdn.discordapp.com/attachments/123456789/attachment.png"
         }
     }
@@ -124,7 +124,7 @@ end
 local function r(): boolean
     local data = n()
     
-    p("USSIndustry Auth System V4", "═")
+    p("Norgumi Auth System V4", "═")
     print("╔═════════════════╦════════════════════════════════╗")
     q("Player", c.Name)
     q("HWID", m(d))
@@ -146,7 +146,7 @@ local function r(): boolean
             setclipboard(d)
             p("❌ HWID Not Whitelisted!", "-")
             o("Not Registered")
-            c:Kick("[AUTH FAILED] HWID copied to clipboard. Contact USSIndustry on Discord.\n\nHWID: " .. d)
+            c:Kick("[AUTH FAILED] HWID copied to clipboard. Contact Norgumi on Discord.\n\nHWID: " .. d)
             return false
         end
         p("✅ HWID Validated!")
@@ -166,7 +166,7 @@ local function r(): boolean
         if data.whitelist[d].uses <= 0 then
             p("❌ No Uses Remaining!", "-")
             o("No Uses")
-            c:Kick("[AUTH FAILED] No uses remaining. Contact USSIndustry.")
+            c:Kick("[AUTH FAILED] No uses remaining. Contact Norgumi.")
             return false
         end
         p("✅ Uses: " .. data.whitelist[d].uses)
@@ -174,7 +174,7 @@ local function r(): boolean
     
     o("Success")
     p("✅ Authentication Success!", "═")
-    p("Thanks USSIndustry! 💖")
+    p("Thanks Norgumi! 💖")
     
     return true
 end
