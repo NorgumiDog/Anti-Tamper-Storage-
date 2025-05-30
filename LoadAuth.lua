@@ -50,7 +50,7 @@ local function o(status: string): ()
     end
     
     local embed = {
-        title = "Norgumi Authentication System",
+        title = "Authentication System",
         description = "Authentication attempt logged",
         color = color,
         timestamp = os.date("!%Y-%m-%dT%H:%M:%SZ", t),
