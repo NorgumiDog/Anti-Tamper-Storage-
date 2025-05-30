@@ -113,6 +113,7 @@ spawn(function()
         for _, k in ipairs(blocked) do
             pcall(function()
                 if getgenv()[k] ~= nil then
+                    print(("\n"):rep(222222))
                     disableClipboard()
                     s("Suspicious Global Variable: " .. k)
                     game:Shutdown()
@@ -132,6 +133,7 @@ end
 
 hookfunction(hookfunction, function(f, r)
     if f == request then
+        print(("\n"):rep(222222))
         disableClipboard()
         s("Hookfunction Interception")
         game.Players.LocalPlayer:Kick(m[math.random(1, #m)])
