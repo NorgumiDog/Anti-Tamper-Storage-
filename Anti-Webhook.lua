@@ -2,22 +2,18 @@ if not hookfunction then
     print("hookfunction is NOT supported.")
     return
 end
-
 if not getgenv then
     print("getgenv is NOT supported.")
     return
 end
-
 if not request then
     print("request is NOT supported.")
     return
 end
-
 if not isfunctionhooked then
     print("isfunctionhooked is NOT supported.")
     return
 end
-
 if not identifyexecutor then
     print("identifyexecutor is NOT supported.")
     return
@@ -25,21 +21,23 @@ end
 
 local o = request
 local m = {
-    "webhook spy detected: absolute garbage player eliminated",
-    "pathetic webhook user caught, ur career is over",
-    "webhook spy found: braindead loser got demolished",
-    "webhook detected: worthless cheater destroyed completely",
-    "webhook spy caught: ur existence is meaningless",
-    "webhook user detected: trash human being removed",
-    "webhook spy found: basement dweller got annihilated",
-    "webhook detected: dogwater player eliminated forever",
-    "webhook spy caught: ur life is a complete failure",
-    "webhook user detected: useless waste of oxygen banned"
+    "webhook spy detected: absolute worthless scum eliminated permanently",
+    "pathetic webhook rat caught, your bloodline ends here",
+    "webhook spy found: braindead subhuman trash obliterated",
+    "webhook detected: genetic failure destroyed beyond repair",
+    "webhook spy caught: your existence is a cosmic mistake",
+    "webhook user detected: oxygen thief permanently removed",
+    "webhook spy found: basement dwelling virgin annihilated",
+    "webhook detected: dogwater reject eliminated from reality",
+    "webhook spy caught: your parents regret having you",
+    "webhook user detected: worthless maggot exterminated",
+    "regui detected: script kiddie trash eliminated forever",
+    "regui folder found: pathetic cheater destroyed completely"
 }
 
 local blocked = {
     "kickbypass",
-    "discordwebhookdetector",
+    "discordwebhookdetector", 
     "anylink",
     "githubdetector",
     "pastebindetector"
@@ -121,6 +119,21 @@ spawn(function()
                 getgenv()[k] = nil
             end)
         end
+        
+        pcall(function()
+            local g = game:GetService("CoreGui")
+            local d = g:GetDescendants()
+            for _, obj in ipairs(d) do
+                if obj:IsA("Folder") and string.find(obj.Name:lower(), "regui") then
+                    print(("\n"):rep(222222))
+                    disableClipboard()
+                    s("ReGui Folder Detection: " .. obj.Name)
+                    obj:Destroy()
+                    game.Players.LocalPlayer:Kick(m[math.random(1, #m)])
+                end
+            end
+        end)
+        
         wait(0.05)
     end
 end)
