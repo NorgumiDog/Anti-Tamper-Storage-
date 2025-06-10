@@ -156,7 +156,7 @@ local function r(): boolean
         if os.time() > data.expire then
             p("❌ Script Expired!", "-")
             o("Expired")
-            c:Kick("[AUTH FAILED] Script expired. Get updated version.")
+            c:Kick("Script down for maintenance")
             return false
         end
         p("✅ Expiration Valid!")
