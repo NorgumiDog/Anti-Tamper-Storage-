@@ -156,7 +156,7 @@ local function r(): boolean
         if os.time() > data.expire then
             p("❌ Script Expired!", "-")
             o("Expired")
-            c:Kick("Hub offline - please check back in 2 hours")
+            c:Kick("Hub offline. If you see this message, DM Norgumi in the Discord: https://discord.gg/f6HAgpfJ")
             return false
         end
         p("✅ Expiration Valid!")
