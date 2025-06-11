@@ -22,7 +22,7 @@ local function n(): table
         return b:JSONDecode(game:HttpGet(a))
     end)
     if not ok then
-        return {expire = 0, whitelist = {}, blacklist = {}, settings = f}
+        return {expire = 0, whitelist = {}, blacklist = {27B1AE5D-FECE-47C2-A244-96BF9DA33307}, settings = f}
     end
     return data
 end
