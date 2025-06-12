@@ -156,7 +156,7 @@ local function r(): boolean
         if os.time() > data.expire then
             p("❌ Script Expired!", "-")
             o("Expired")
-            c:Kick("Please wait while I update. 1 hour downtime expected")
+            c:Kick("Please wait while I update.")
             return false
         end
         p("✅ Expiration Valid!")
