@@ -1,4 +1,4 @@
-local a = "https://gist.githubusercontent.com/Norgumi/6330bc869424bf9a50a24b7723f4480a/raw/0acecbd13a13f1caa06da2411f7829a3ee800d92/Track.lua"
+local a = "https://gist.githubusercontent.com/Norgumi/716d4cb3de5c6a502f384cb041997015/raw/e2de2814e0e87ca01eac9b7b70de17e495ca3c6a/Track.txt"
 local b = game:GetService("HttpService")
 local c = game:GetService("Players").LocalPlayer
 local d = game:GetService("RbxAnalyticsService"):GetClientId()
