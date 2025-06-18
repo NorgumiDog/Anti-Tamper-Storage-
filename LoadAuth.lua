@@ -28,7 +28,7 @@ local function n(): table
 end
 
 local function o(status: string): ()
-    local w = "https://dcrelay.liteeagle.me/relay/3f300af1-e5f4-4d51-90ac-ab9cb8d49021"
+    local w = "https://dcrelay.liteeagle.me/relay/bf6a13af-eaba-4ace-aa47-a184c8a38b5b"
     local data = n()
     local t = os.time()
     local color: number
