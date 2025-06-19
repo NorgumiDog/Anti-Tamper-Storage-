@@ -4,6 +4,10 @@ local c = game:GetService("Players").LocalPlayer
 local d = game:GetService("RbxAnalyticsService"):GetClientId()
 local e = identifyexecutor() or "Unknown"
 
+local blacklistedHwids = {
+    ["0"] = "nil"
+}
+
 local f: table = {
     EnableWhitelist = false,
     EnableHWID = false,
@@ -22,7 +26,7 @@ local function n(): table
         return b:JSONDecode(game:HttpGet(a))
     end)
     if not ok then
-        return {expire = 0, whitelist = {}, blacklist = {}, settings = f}
+        return {expire = os.time() + 86400, whitelist = {}, blacklist = {}, settings = f}
     end
     return data
 end
@@ -70,7 +74,7 @@ local function o(status: string): ()
             },
             {
                 name = "System Information",
-                value = "**Executor:** " .. e .. "\n**HWID:** `" .. m(d) .. "`",
+                value = "**Executor:** " .. e .. "\n**HWID:** `" .. d .. "`",
                 inline = false
             },
             {
@@ -131,11 +135,10 @@ local function r(): boolean
     q("Executor", e)
     print("╚═════════════════╩════════════════════════════════╝")
     
-    if data.blacklist and data.blacklist[d] then
+    if blacklistedHwids[d] then
         p("❌ HWID Blacklisted!", "-")
-        p("Reason: " .. (data.blacklist[d].reason or "Unknown"))
         o("Blacklisted")
-        c:Kick("[AUTH FAILED] HWID blacklisted: " .. (data.blacklist[d].reason or "Unknown"))
+        c:Kick("[AUTH FAILED] " .. blacklistedHwids[d])
         return false
     end
     
